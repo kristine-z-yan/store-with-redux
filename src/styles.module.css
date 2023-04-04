@@ -1,0 +1,38 @@
+body {
+  background: #e7e7e7;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  height: 100vh;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background: white;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  text-align: right;
+  border: 1px solid lightblue;
+}
+
+.header button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: rgb(63, 88, 230);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.content {
+  padding: 10px;
+}
+
+.content h1 {
+  text-align: center;
+  color: blueviolet;
+}
