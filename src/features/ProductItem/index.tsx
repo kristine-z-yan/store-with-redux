@@ -4,7 +4,8 @@ import styles from './styles.module.css';
 export type Product = {
     title: string,
     price: number,
-    description: string
+    description: string,
+    id: number
 }
 
 export const ProductItem = (props: Product) => {

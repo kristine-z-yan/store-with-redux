@@ -1,6 +1,4 @@
-import { Card } from './components/Card';
-import { ProductItem } from './features/ProductItem';
-import { Products } from './pages/Products/Products';
+import { Products } from './pages/Products';
 import styles from './styles.module.css';
 
 function App() {
