@@ -1,13 +1,23 @@
-import { Products } from './pages/Products';
+import { Link } from 'react-router-dom';
+import { Products } from './app/routes/pages/Products';
 import styles from './styles.module.css';
 
 function App() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <button>
-          My Cart
-        </button>
+        <nav>
+          <ul>
+            <li>
+              <Link to={`/`}>Home</Link>
+            </li>
+            <li>
+              <Link to={`/my-cart`}>
+                  My Cart
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
       <div className={styles.content}>
           <h1>Shop your favorite items</h1>

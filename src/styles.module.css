@@ -1,5 +1,7 @@
 body {
   background: #e7e7e7;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -19,13 +21,24 @@ body {
   border: 1px solid lightblue;
 }
 
-.header button {
+.header ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header li {
   margin: 10px;
   padding: 10px 20px;
-  background-color: rgb(63, 88, 230);
-  color: white;
-  border: none;
+  border: 1px solid  rgb(63, 88, 230);
   border-radius: 5px;
+}
+
+.header li a {
+  color: rgb(63, 88, 230);
+  text-decoration: none;
 }
 
 .content {

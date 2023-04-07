@@ -1,5 +1,5 @@
-import { productsApi } from '../../app/services/ProductService';
-import { ProductItem } from '../../features/ProductItem';
+import { productsApi } from '../../../services/ProductService';
+import { ProductItem } from '../../../../features/ProductItem';
 import styles from './styles.module.css';
 
 export const Products = () => {
@@ -16,7 +16,6 @@ export const Products = () => {
                id={product.id}     
                key={product.id}     
                 />)}
-          
         </section>
     )
 } 

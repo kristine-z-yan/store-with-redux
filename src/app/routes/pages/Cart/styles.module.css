@@ -1,0 +1,17 @@
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    height: 100vh;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background: white;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .content h1 {
+    text-align: center;
+    color: blueviolet;
+  }
