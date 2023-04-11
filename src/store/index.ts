@@ -1,14 +1,14 @@
-import { configureStore, ThunkAction, Action, combineReducers, getDefaultMiddleware } from '@reduxjs/toolkit';
+import { configureStore, ThunkAction, Action, combineReducers } from '@reduxjs/toolkit';
 import { productsApi } from '../services/ProductService';
 
 const rootReducer = combineReducers({
-  [productsApi.reducerPath]: productsApi.reducer
+  [productsApi.reducerPath]: productsApi.reducer,
 })
 
 export const setupStore = () => {
   return configureStore({
     reducer: rootReducer,
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(productsApi.middleware)
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([productsApi.middleware])
   });
 }
 

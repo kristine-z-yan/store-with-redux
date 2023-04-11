@@ -1,5 +1,6 @@
+import React from 'react';
 import { productsApi } from '../../../services/ProductService';
-import { ProductItem } from '../../../../features/ProductItem';
+import { ProductItem } from '../../../features/products/ProductItem';
 import styles from './styles.module.css';
 
 export const Products = () => {
@@ -14,7 +15,7 @@ export const Products = () => {
                price={product.price}
                description={product.description}
                id={product.id}     
-               key={product.id}     
+               key={product.id}
                 />)}
         </section>
     )

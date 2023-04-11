@@ -1,5 +1,6 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Products } from './app/routes/pages/Products';
+import { Products } from './routes/pages/ProductsPage';
 import styles from './styles.module.css';
 
 function App() {

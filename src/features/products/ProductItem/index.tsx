@@ -1,4 +1,6 @@
-import { Card } from "../../components/Card";
+import React from "react";
+import { useAppDispatch } from "../../../hooks";
+import { Card } from "../../../shared/components/Card";
 import styles from './styles.module.css';
 
 export type Product = {
@@ -9,7 +11,13 @@ export type Product = {
 }
 
 export const ProductItem = (props: Product) => {
-    const { title, price, description } = props;
+    const { title, price, description, id } = props;
+    const dispatch = useAppDispatch();
+
+    const handleAddToCart = () => {
+        // dispatch(addToCart({...props}))
+    }
+
     return (
         <Card>
             <div className={styles.header}>
@@ -18,7 +26,7 @@ export const ProductItem = (props: Product) => {
             </div>
             <p>{description}</p>
             <div className={styles.actions}>
-                <button>Add to Cart</button>
+                <button onClick={handleAddToCart}>Add to Cart</button>
             </div>
         </Card>
     )
