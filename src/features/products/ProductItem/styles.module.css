@@ -21,4 +21,6 @@
     color: white;
     border: none;
     border-radius: 5px;
+    pointer-events: all;
+    cursor: pointer;
 }

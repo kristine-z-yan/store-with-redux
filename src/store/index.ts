@@ -1,8 +1,10 @@
 import { configureStore, ThunkAction, Action, combineReducers } from '@reduxjs/toolkit';
+import { cartSlice } from '../features/cart/CartSlice';
 import { productsApi } from '../services/ProductService';
 
 const rootReducer = combineReducers({
   [productsApi.reducerPath]: productsApi.reducer,
+  cart: cartSlice.reducer
 })
 
 export const setupStore = () => {

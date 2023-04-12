@@ -1,6 +1,7 @@
 import React from "react";
-import { useAppDispatch } from "../../../hooks";
+import { useAppDispatch, useAppSelector } from "../../../hooks";
 import { Card } from "../../../shared/components/Card";
+import { cartActions, CartProduct } from "../../cart/CartSlice";
 import styles from './styles.module.css';
 
 export type Product = {
@@ -11,11 +12,12 @@ export type Product = {
 }
 
 export const ProductItem = (props: Product) => {
-    const { title, price, description, id } = props;
+    const { title, price, description } = props;
     const dispatch = useAppDispatch();
+    const cart = useAppSelector(state => state.cart)
 
     const handleAddToCart = () => {
-        // dispatch(addToCart({...props}))
+        dispatch(cartActions.addToCart(props))
     }
 
     return (
@@ -26,7 +28,7 @@ export const ProductItem = (props: Product) => {
             </div>
             <p>{description}</p>
             <div className={styles.actions}>
-                <button onClick={handleAddToCart}>Add to Cart</button>
+                <button type="button" onClick={handleAddToCart}>Add to Cart</button>
             </div>
         </Card>
     )

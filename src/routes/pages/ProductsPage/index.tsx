@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { productsApi } from '../../../services/ProductService';
 import { ProductItem } from '../../../features/products/ProductItem';
 import styles from './styles.module.css';
+import { useAppDispatch, useAppSelector } from '../../../hooks';
 
 export const Products = () => {
-     const {data: products, error, isLoading} = productsApi.useFetchAllProductsQuery(5)
+     const {data: products, error, isLoading} = productsApi.useFetchAllProductsQuery(5);
 
      return (
         <section className={styles.products}>

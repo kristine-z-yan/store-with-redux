@@ -1,0 +1,11 @@
+.tableRow {
+    border-bottom: 1px solid lightgray;
+}
+
+.tableRow td {
+    padding: 10px;
+}
+
+.tableRow td > span {
+    margin: 0 10px;
+} 

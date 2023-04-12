@@ -1,10 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { IProduct } from "../../shared/models/IProduct";
 
-type CartProduct = {
+export type CartProduct = {
   qty: number,
   price: number,
   title: string,
-  descrption: string,
+  description: string,
   id: number,
 }
 
@@ -14,18 +15,32 @@ type InitialState = {
     error: string
 }
 
-const initialState = {
+const initialState: InitialState = {
   products: [],
   loading: false,
   error: ''
 }
 
-const CartSlice = createSlice({
+export const cartSlice = createSlice({
     name: 'cart',
     initialState: initialState,
     reducers: {
-      addToCart: (state, action: PayloadAction<CartProduct>) => {
-        //add to cart
+      addToCart: (state, action: PayloadAction<IProduct>) => {
+        let product = state.products.find(item => item.id == action.payload.id);
+        
+        if (product) {
+          product.qty++
+        } else {
+          state.products = [
+            ...state.products,
+            {...action.payload, qty: 1}
+          ]
+        }
+        
       }
     },
 })
+
+export const cartActions = cartSlice.actions;
+
+export default cartSlice.reducer;

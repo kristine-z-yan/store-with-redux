@@ -19,6 +19,7 @@ body {
   width: 100%;
   text-align: right;
   border: 1px solid lightblue;
+  background: white;
 }
 
 .header ul {

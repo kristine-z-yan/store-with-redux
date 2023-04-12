@@ -1,0 +1,11 @@
+.table {
+    width: 70%;
+    padding: 15px;
+    margin: 10px 20px;
+    border-collapse: collapse;
+}
+
+.table thead {
+    color: #938e8e;
+    text-align: left;
+}

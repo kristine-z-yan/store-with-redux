@@ -15,3 +15,12 @@
     text-align: center;
     color: blueviolet;
   }
+
+  .cartSection {
+    display: flex;
+    justify-content: center;
+  }
+
+  .summary {
+    width: 30%;
+  }
