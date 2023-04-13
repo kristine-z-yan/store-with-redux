@@ -37,6 +37,22 @@ export const cartSlice = createSlice({
           ]
         }
         
+      },
+      incrementQty: (state, action: PayloadAction<number>) => {
+        let product = state.products.find(item => item.id == action.payload);
+        if(product) {
+          product.qty++
+        }
+      },
+      decrementQty: (state, action: PayloadAction<number>) => {
+        let index = state.products.findIndex(item => item.id == action.payload);
+        if(index > -1) {
+          state.products[index].qty--
+          
+          if(state.products[index].qty === 0) {
+            state.products.splice(index, 1) 
+          }
+        }
       }
     },
 })

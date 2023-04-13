@@ -23,4 +23,43 @@
 
   .summary {
     width: 30%;
+    border: 1px solid lightgrey;
+    margin-top: 48px;
   }
+
+.summary h2 {
+  border-bottom: 1px solid lightgrey;
+  padding: 20px;
+  margin: 0;
+}
+
+.summaryDetails {
+  list-style: none;
+  padding: 10px;
+}
+
+.summaryDetails li {
+  margin-bottom: 10px;
+}
+
+.summaryDetails li span:last-of-type {
+  float: right;
+}
+
+.total {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e7e5e5;
+  font-size: 18px;
+}
+
+.summary button {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: rgb(9, 207, 26);
+  color: white;
+  border: none;
+  pointer-events: all;
+  cursor: pointer;
+}

@@ -8,4 +8,9 @@
 .table thead {
     color: #938e8e;
     text-align: left;
+    border-bottom: 1px solid lightgray
+}
+
+.table th {
+    padding: 10px
 }

@@ -1,27 +1,21 @@
 import React from "react";
-import { Card } from "../../../shared/components/Card";
-import { CartProduct } from "../CartSlice";
+import { useAppDispatch } from "../../../hooks";
+import { cartActions, CartProduct } from "../CartSlice";
 import styles from './styles.module.css';
 
 export const CartTableItem:React.FC<{product: CartProduct}> = ({product}) => {
-    const incrementCount= () => {
-        //increment qty
-    }
+    const dispatch = useAppDispatch();
 
-    const decrementCount = () => {
-        // decriment qty
-    }
     return (
         <tr className={styles.tableRow}>
             <td>{product.title}</td>
-            <td>${product.price}</td>
+            <td>$ {product.price}</td>
             <td>
-                <button onClick={incrementCount}>+</button>
+                <button onClick={() => dispatch(cartActions.decrementQty(product.id))}>-</button>
                 <span>{product.qty}</span>
-                <button onClick={decrementCount}>-</button>
+                <button onClick={() => dispatch(cartActions.incrementQty(product.id))}>+</button>
             </td>
-            <td>{product.qty * product.price}</td>
-            <td>X</td>
+            <td>$ {product.qty * product.price}</td>
         </tr>
     )
 }
