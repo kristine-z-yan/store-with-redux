@@ -1,31 +1,31 @@
 .container {
-    width: 1000px;
-    margin: 0 auto;
-    height: 100vh;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    background: white;
-  }
+  width: 1000px;
+  margin: 0 auto;
+  height: 100vh;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background: white;
+}
 
-  .content {
-    padding: 10px;
-  }
+.content {
+  padding: 10px;
+}
 
-  .content h1 {
-    text-align: center;
-    color: blueviolet;
-  }
+.content h1 {
+  text-align: center;
+  color: blueviolet;
+}
 
-  .cartSection {
-    display: flex;
-    justify-content: center;
-  }
+.cartSection {
+  display: flex;
+  justify-content: center;
+}
 
-  .summary {
-    width: 30%;
-    border: 1px solid lightgrey;
-    margin-top: 48px;
-  }
+.summary {
+  width: 30%;
+  border: 1px solid lightgrey;
+  margin-top: 48px;
+}
 
 .summary h2 {
   border-bottom: 1px solid lightgrey;
